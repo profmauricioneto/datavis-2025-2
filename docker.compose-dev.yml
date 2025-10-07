@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+    app:
+      build: .
+      container_name: datavis-dash-dev-compose
+      ports:
+        - "8050:8050"
+
+      volumes:
+        - ".:/app"
+
+      command:
+        - "python app.py"

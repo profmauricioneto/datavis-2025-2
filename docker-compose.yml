@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+
+    container_name: datavis-dash-compose
+
+    ports:
+      - "8050:8050"
+
+    restart: "unless-stopped"
